@@ -111,11 +111,16 @@ setopt HIST_FIND_NO_DUPS
 
 # ALIASES
 
-alias p="ping google.com"
 # lsd shortcuts
 alias ll="/usr/local/bin/lsd --long --group-dirs=first"
 alias lla="/usr/local/bin/lsd --long --all --group-dirs=first"
 alias llt="/usr/local/bin/lsd --tree --all"
-
+# a bit of color
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias diff='diff --color=auto'
+# just lazy shortcuts
+alias p="ping google.com"
+alias ..='cd ..'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
