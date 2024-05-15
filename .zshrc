@@ -109,5 +109,13 @@ setopt HIST_IGNORE_ALL_DUPS
 # do not find duplicate command when searching
 setopt HIST_FIND_NO_DUPS
 
+# ALIASES
+
+alias p="ping google.com"
+# lsd shortcuts
+alias ll="/usr/local/bin/lsd --long --group-dirs=first"
+alias lla="/usr/local/bin/lsd --long --all --group-dirs=first"
+alias llt="/usr/local/bin/lsd --tree --all"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
