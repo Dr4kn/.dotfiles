@@ -1,0 +1,95 @@
+[user]
+	email = servicesDrkn@gmail.com
+	name = Dr4kn
+# puts stuff like branches into columns
+[branch]
+	sort = -committerdate
+[column]
+	ui = auto
+[core]
+	editor = vim
+[credential]
+	helper = store
+[help]
+	autocorrect = 20
+[init]
+	defaultBranch = main
+# if you fixed a merge conflict once git remembers it
+[rerere]
+	enabled = true
+
+    # run it in every active repository
+    # it just makes git faster
+    # git maintenance start
+
+    # things for large repositories
+    #
+    # makes running git status in large repositories much faster
+    # git config core.fsmonitor true
+    #
+    # only downloades the blobs for your wd
+    # git clone --filter=blob=none 
+
+    
+    
+[alias]
+	# graph view with pretty formating
+	graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all	
+	lg = graph
+	lg1 = lg
+	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n%C(white)%s%C(reset) %C(dim white) - %an%C(reset)' --all
+	lg3 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n%C(white)%s%C(reset)%n%C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
+	ls = lg # don't ask
+
+	s = status
+	# less verbose version of status
+	st = status -sb
+    # generally just use switch instead of checkout
+	co = checkout
+	check = co
+	cm = commit -m
+	save = !git add -A && git commit -m 'chore: commit save point'
+	empty = commit -a --allow-empty-message -m ''
+	# e.g. br main -> creates branch and switches to it
+	br = checkout -b
+	# e.g. del feature
+	del = branch -D
+	dl = branch -D
+	# removes the last commit from history
+	undo = reset HEAD~1 --mixed
+	# shows the changes of the last commit
+	last = log -1 HEAD --stat
+	# removes all local changes
+	fuckit = reset --hard
+	done = push origin HEAD
+	ri = rebase -i
+	# rebase interactive fast
+	# set high enough for pretty much every rebase I do
+	rif = rebase -i HEAD~10
+
+	# remove file or directory from staging
+	unstage = reset HEAD -- 
+	rs = unstage
+	us = unstage
+
+	# this is mostly here so that I don't have to look up it's name everytime
+	# https://git-scm.com/docs/git-bisect
+	debug = bisect
+
+    # ignore white 
+    # and detect lines moved or copied in same commit
+    # or the commit that created the file
+    # or any commit at all
+    #
+    # can give line range with -L x:x path/to/file 
+    bblame = blame -w -C -C -C
+
+    wdiff = diff --word-diff
+
+    # saver force push
+    fwl = --force-with-lease
+
+    # pretty much only usefull for building
+    dclone = clone --depth=1
+
+    # reflog = what you've done locally
