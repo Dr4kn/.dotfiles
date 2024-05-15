@@ -3,3 +3,7 @@ all:
 
 delete:
 	stow --verbose --target=$$HOME --delete .
+
+apt_install:
+	apt install stow
+	apt install lsd

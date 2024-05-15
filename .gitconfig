@@ -10,10 +10,21 @@
 	editor = vim
 [credential]
 	helper = store
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
 [help]
 	autocorrect = 20
 [init]
 	defaultBranch = main
+[merge]
+	tool = vimdiff
+	conflictStyle = zdiff3
+[mergetool]
+	prompt = false
+[pull]
+	rebase = false
 # if you fixed a merge conflict once git remembers it
 [rerere]
 	enabled = true
