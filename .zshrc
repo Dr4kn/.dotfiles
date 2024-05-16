@@ -52,6 +52,7 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 # loaded before first prompt
 zinit light marlonrichert/zsh-autocomplete
 zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
 
 # loaded after first prompt
 zinit wait lucid for \
