@@ -8,3 +8,5 @@ apt_install:
 	apt install stow
 	apt install lsd
 	apt install vim
+	apt install zsh
+	chsh -s $(which zsh)

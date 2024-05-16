@@ -5,11 +5,12 @@ You can either use the commands directly or let the provided makefile do it for 
 
 ## Instructions
 
-If you want to use zsh you have to set it as your Shell manually.
-
 Clone this folder into your home directory.
-On Debian/Ubuntu you can run `sudo make install` to install the used programs (this includes stow).
+On Debian/Ubuntu you can run `sudo make install` to install the used programs.
 Run `make` to let stow create the syslinks.
+
+The programms that are installed are:
+vim, stow, lsd and zsh (which is then also set as the default shell)
 
 ## Uninstall
 Run `make delete` to remove all links created.
