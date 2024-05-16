@@ -87,11 +87,17 @@ zstyle ':autocomplete:*history*:*' insert-unambiguous yes
 # ^S
 zstyle ':autocomplete:menu-search:*' insert-unambiguous yes
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.config/.zsh/.p10k.zsh ]] || source ~/.config/.zsh/.p10k.zsh
+# COMPLETION SETTINGS
+# makes suggestions case unsensitive
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+# COMPLETIONS
+# Load completions
+autoload -Uz compinit && compinit
+# makes them much load much faster
+zinit cdreplay -q
 
 # ZSH HISTORY
-
 # create folder if it doesn't exist
 if [ ! -f "$HOME/.config/zsh" ]; then
     command mkdir -p "$HOME/.config/zsh"
@@ -105,10 +111,14 @@ export HISTSIZE=268435456
 export SAVEHIST="$HISTSIZE"
 # writes to hist file before command is executed
 setopt inc_append_history
+# shares history across all open zsh shells
+setopt sharehistory
+# doesn't save commands with a space before them
+setopt hist_ignore_space
 # don't duplicate commands to history
-setopt HIST_IGNORE_ALL_DUPS
+setopt hist_ignore_all_dups
 # do not find duplicate command when searching
-setopt HIST_FIND_NO_DUPS
+setopt hist_find_no_dups
 
 # ALIASES
 
@@ -123,5 +133,9 @@ alias diff='diff --color=auto'
 # just lazy shortcuts
 alias p="ping google.com"
 alias ..='cd ..'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.config/.zsh/.p10k.zsh ]] || source ~/.config/.zsh/.p10k.zsh
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
