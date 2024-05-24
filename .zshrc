@@ -60,8 +60,7 @@ zinit wait lucid for \
         zsh-users/zsh-syntax-highlighting \
         urbainvaes/fzf-marks \
         zdharma-continuum/history-search-multi-word \
-        ael-code/zsh-colored-man-pages \
-        supercrabtree/k
+        ael-code/zsh-colored-man-pages
 
 # loads several git plugins 1s after prompt
 zi as'null' lucid sbin wait'1' for \
@@ -118,6 +117,7 @@ setopt hist_find_no_dups
 # lsd shortcuts
 alias ll="/bin/lsd --long --group-dirs=first"
 alias lla="/bin/lsd --long --all --group-dirs=first"
+alias k=lla
 alias llt="/bin/lsd --tree --all"
 # a bit of color
 alias ls='ls --color=auto'
