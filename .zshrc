@@ -97,14 +97,7 @@ autoload -Uz compinit && compinit
 # makes them much load much faster
 zinit cdreplay -q
 
-# ZSH HISTORY
-# create folder if it doesn't exist
-if [ ! -f "$HOME/.config/zsh" ]; then
-    command mkdir -p "$HOME/.config/zsh"
-    print -P ".config/zsh/ created"
-fi
-
-export HISTFILE="$HOME/.config/zsh/.zsh_history"
+export HISTFILE="$HOME/.zsh_history"
 # number of events loaded in memoryh
 export HISTSIZE=268435456
 # number of events stored in zsh hist file
