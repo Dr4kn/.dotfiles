@@ -129,6 +129,7 @@ alias dcud="docker compose up -d"
 alias dcu="docker composer up"
 alias dcd="docker compose down" 
 alias dls="docker ps" 
+alias dcl="docker compose logs"
 # i don't want to do volume because accidently executing it wouldn't be fun
 
 # alias dpp='echo -e "\nID\t{{.ID}}\nImage\t{{.Image}}\nCommand\t{{.Command}}\nCreated\t{{.RunningFor}}\nStatus\t{{.Status}}\nPorts\t{{.Ports}}\nNames\t{{.Names}}\n"'
