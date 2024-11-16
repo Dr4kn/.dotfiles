@@ -30,10 +30,6 @@ set syntax
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
-try
-    colorscheme desert
-catch
-endtry
 
 
 
@@ -179,6 +175,13 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+
+" install color scheme
+Plug 'fugalh/desert.vim'
+try
+    colorscheme desert
+catch
+endtry
 
 " does as the name implies
 Plug 'machakann/vim-highwlightedyank'
