@@ -20,7 +20,7 @@
 	defaultBranch = main
 [merge]
 	tool = vimdiff
-	conflictStyle = zdiff3
+    # conflictStyle = zdiff3
 [mergetool]
 	prompt = false
 [pull]

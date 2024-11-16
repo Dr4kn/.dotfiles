@@ -27,13 +27,11 @@ set wrap
 " syntax highlighting
 set syntax
 " Enable 256 colors palette in Gnome Terminal
-" if $COLORTERM == 'gnome-terminal'
+<<<<<<< HEAD
 set t_Co=256
-" endif
-" try
-" colorscheme desert
-" catch
-" endtry
+||||||| a6f25a9
+=======
+>>>>>>> 738679637b3a5894877109736c79255afb5db6d2
 
 
 
@@ -179,6 +177,13 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+
+" install color scheme
+Plug 'fugalh/desert.vim'
+try
+    colorscheme desert
+catch
+endtry
 
 " does as the name implies
 Plug 'machakann/vim-highwlightedyank'
