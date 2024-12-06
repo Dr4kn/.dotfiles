@@ -1,3 +1,5 @@
+catch
+endtry
 " GENERAL
 
 " change <Leader>  to space
@@ -27,13 +29,8 @@ set wrap
 " syntax highlighting
 set syntax
 " Enable 256 colors palette in Gnome Terminal
-" if $COLORTERM == 'gnome-terminal'
 set t_Co=256
-" endif
-" try
-" colorscheme desert
-" catch
-" endtry
+>>>>>>> 111f9c9 (removed theme because it clashes with wezterms theming, which is already better then the one set before)
 
 
 
