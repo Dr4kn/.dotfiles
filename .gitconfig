@@ -3,7 +3,7 @@
 	name = Dr4kn
 # puts stuff like branches into columns
 [branch]
-	sort = -committerdate
+sort = -committerdate
 [column]
 	ui = auto
 [core]
@@ -18,8 +18,8 @@
 	autocorrect = 20
 [init]
 	defaultBranch = main
-[merge]
-	tool = vimdiff
+# [merge]
+#	tool = vimdiff
 [mergetool]
 	prompt = false
 [pull]
