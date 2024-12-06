@@ -1,5 +1,3 @@
-catch
-endtry
 " GENERAL
 
 " change <Leader>  to space
