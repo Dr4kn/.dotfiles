@@ -1,5 +1,6 @@
 all:
 	stow --verbose --target=$$HOME --restow .
+	ln .vimrc .ideavimrc
 
 delete:
 	stow --verbose --target=$$HOME --delete .
