@@ -1,3 +1,5 @@
+catch
+endtry
 " GENERAL
 
 " change <Leader>  to space
@@ -28,7 +30,6 @@ set wrap
 set syntax
 " Enable 256 colors palette in Gnome Terminal
 set t_Co=256
->>>>>>> 111f9c9 (removed theme because it clashes with wezterms theming, which is already better then the one set before)
 
 
 
